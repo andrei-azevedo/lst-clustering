@@ -19,8 +19,6 @@ def readPCAP(filepath):
         except:
             pass
         i += 1
-        if i == 5000:
-            break
     X = np.array(packet_list)
     kmeans = KMeans(n_clusters=3, random_state=0).fit(X)
     #filter rows of original data
